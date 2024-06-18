@@ -239,7 +239,7 @@ AudioSource:
   m_GameObject: {fileID: 168527396}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7840904276557906126, guid: 4c371d8de411dfc4d93a37c686806165, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3fbec5a8ff835b34098436a9a752f675, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -589,7 +589,7 @@ AudioSource:
   m_GameObject: {fileID: 232381383}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7840904276557906126, guid: 4c371d8de411dfc4d93a37c686806165, type: 2}
   m_audioClip: {fileID: 8300000, guid: d267264bba550264ea43044cacfb9c62, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1332,6 +1332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697743062}
   - component: {fileID: 697743063}
+  - component: {fileID: 697743064}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -1363,7 +1364,7 @@ AudioSource:
   m_GameObject: {fileID: 697743061}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6702042327691333536, guid: 4c371d8de411dfc4d93a37c686806165, type: 2}
   m_audioClip: {fileID: 8300000, guid: 90c19111dd8bea74880fe56d64ad421f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -1450,6 +1451,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &697743064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697743061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6832bff1be6b7e6439362d10a1040a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeMuteButtonImage: {fileID: 1842701526}
+  _audioSource: {fileID: 697743063}
 --- !u!1 &731804384
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,7 +3037,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1842701526}
-        m_TargetAssemblyTypeName: ChangeMuteImage, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeMuteButtonImage, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -3085,6 +3100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unMuteImage: {fileID: 3710735312813293352, guid: 9fdafb41bb95be742aedf56473d88cf9, type: 3}
   _muteImage: {fileID: 2917288645785632730, guid: 9fdafb41bb95be742aedf56473d88cf9, type: 3}
+  _image: {fileID: 1842701524}
 --- !u!1 &1906669623
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,7 +3205,7 @@ AudioSource:
   m_GameObject: {fileID: 1908921215}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7840904276557906126, guid: 4c371d8de411dfc4d93a37c686806165, type: 2}
   m_audioClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
