@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,20 +7,23 @@ public class ChangeMuteButtonImage : MonoBehaviour
     [SerializeField] private Sprite _unMuteImage;
     [SerializeField] private Sprite _muteImage;
     [SerializeField] private Image _image;
+    [SerializeField] private Toggle _toggle;
 
-    public event Action<bool> OnImageChanged;
-
-    public void OnClick()
+    private void OnEnable()
     {
-        if (_image.sprite == _unMuteImage)
-        {
-            OnImageChanged?.Invoke(false);
-            _image.sprite = _muteImage;
-        }
-        else
-        {
-            OnImageChanged?.Invoke(true);
+        _toggle.onValueChanged.AddListener(ChangeImage);
+    }
+
+    private void OnDisable()
+    {
+        _toggle.onValueChanged.RemoveListener(ChangeImage);
+    }
+
+    public void ChangeImage(bool enabled)
+    {
+        if (enabled)
             _image.sprite = _unMuteImage;
-        }
+        else
+            _image.sprite = _muteImage;
     }
 }
